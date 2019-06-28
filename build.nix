@@ -104,7 +104,7 @@ let
 
       echo packages: > cabal.project
       for spec in ${concatStringsSep " " localPaths}; do
-        echo "  $spec" >> cabal.project
+        echo '  ' $spec/*.cabal >> cabal.project
       done
     '';
   };
